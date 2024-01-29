@@ -2,7 +2,7 @@
 
 ## Task 0
 
-- [ ] `Task_0/`
+- [x] `Task_0/`
 
 ## Task 1
 
