@@ -6,7 +6,7 @@
 
 ## Task 1
 
-- [ ] `Task_1/`
+- [x] `Task_1/`
 
 ## Task 2
 
