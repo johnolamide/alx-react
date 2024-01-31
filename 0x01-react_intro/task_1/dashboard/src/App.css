@@ -1,0 +1,32 @@
+:root {
+  --color-primary: #D73953;
+}
+
+.App-header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  border-bottom: 0.2rem solid var(--color-primary);
+  color: var(--color-primary);
+  align-items: center;
+}
+
+.App-header img {
+  height: 200px;
+  width: 200px;
+}
+
+.App-body {
+  margin-top: 20px;
+  margin-left: 40px;
+}
+
+.App-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-top: 0.2rem solid var(--color-primary);
+  text-align: center;
+  font-style: italic;
+}
