@@ -30,3 +30,10 @@
   text-align: center;
   font-style: italic;
 }
+
+.Login {
+  display: flex;
+  justify-content: space-between;
+  max-width: 50rem;
+  flex-wrap: wrap;
+}
