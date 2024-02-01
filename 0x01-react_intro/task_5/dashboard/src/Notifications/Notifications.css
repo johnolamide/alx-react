@@ -1,0 +1,25 @@
+:root {
+  --color-primary: #D73953;
+}
+
+.Notifications {
+  border: 0.1rem dashed var(--color-primary);
+  padding: 20px;
+}
+
+.Notifications button img {
+  width: 20px;
+  height: 20px;
+}
+
+.Notifications button {
+  margin: 10px;
+}
+
+li[data-priority="default"] {
+  color: blue;
+}
+
+li[data-priority="urgent"] {
+  color: red;
+}
