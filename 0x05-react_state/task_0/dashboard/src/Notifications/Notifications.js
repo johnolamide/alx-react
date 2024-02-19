@@ -56,12 +56,6 @@ const styles = StyleSheet.create({
 });
 
 class Notifications extends React.Component {
-  constructor(props) {
-	super(props);
-	this.displayDrawer = props.displayDrawer || false;
-	this.listNotifications = props.listNotifications || [];
-  }
-	
   shouldComponentUpdate(nextProps) {
 	return nextProps.listNotifications.length > this.props.listNotifications.length;
   }
