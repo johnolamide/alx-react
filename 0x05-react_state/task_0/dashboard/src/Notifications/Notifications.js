@@ -56,11 +56,6 @@ const styles = StyleSheet.create({
 });
 
 class Notifications extends React.Component {
-  constructor(props) {
-	super(props);
-	this.markAsRead = this.markAsRead.bind(this);
-  }
-
   shouldComponentUpdate(nextProps) {
 	const { listNotifications, displayDrawer } = this.props;
 	return (
