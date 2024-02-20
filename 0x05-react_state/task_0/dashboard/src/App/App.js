@@ -28,20 +28,21 @@ const styles = StyleSheet.create({
   }
 });
 
+const listCourses = [
+  { id: 1, name: "ES6", credit: 60 },
+  { id: 2, name: "Webpack", credit: 20 },
+  { id: 3, name: "React", credit: 40 },
+];
+
+const listNotifications = [
+  { id: 1, type: "default", value: "New course available" },
+  { id: 2, type: "urgent", value: "New resume available" },
+  { id: 3, type: "urgent", html: { __html: getLatestNotification() } },
+];
+
 class App extends React.Component {
   constructor(props) {
 	super(props);
-	this.isLoggedIn = props.isLoggedIn || false;
-	this.listCourses = [
-	  {id: 1, name: 'ES6', credit: 60},
-	  {id: 2, name: 'Webpack', credit: 20},
-	  {id: 3, name: 'React', credit: 40},
-	];
-	this.listNotifications = [
-	  {id: 1, type: "default", value: "New course available"},
-	  {id: 2, type: "urgent", value: "New resume available"},
-	  {id: 3, type: "urgent", html: { __html: getLatestNotification() }},
-	];
 	this.state = {
 	  displayDrawer: false,
 	};
@@ -74,16 +75,18 @@ class App extends React.Component {
   }
 
   render() {
+	const { isLoggedIn } = this.props;
+	const { displayDrawer } = this.state;
 	return (
 		<>
-			<Notifications listNotifications={this.listNotifications} displayDrawer={this.state.displayDrawer}
+			<Notifications listNotifications={listNotifications} displayDrawer={displayDrawer}
 			  handleDisplayDrawer={this.handleDisplayDrawer} handleHideDrawer={this.handleHideDrawer}/>
 			<div className={css(styles.body)}>
 				<Header />
 				<div className={css(styles.appBody)}>
-					{this.isLoggedIn ? (
+					{isLoggedIn ? (
 						<BodySectionWithMarginBottom title="Course list">
-							<CourseList listCourses={this.listCourses} />
+							<CourseList listCourses={listCourses} />
 						</BodySectionWithMarginBottom>
 					) : (
 						<BodySectionWithMarginBottom title="Log in to continue">
