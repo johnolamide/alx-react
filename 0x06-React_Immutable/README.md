@@ -30,7 +30,7 @@
 
 ## Task 7
 
-- [ ] `7-equality.js`
+- [x] `7-equality.js`
 
 ## Task 8
 
