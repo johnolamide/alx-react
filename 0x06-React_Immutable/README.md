@@ -26,7 +26,7 @@
 
 ## Task 6
 
-- [ ] `6-deeply.js`
+- [x] `6-deeply.js`
 
 ## Task 7
 
