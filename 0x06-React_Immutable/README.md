@@ -18,7 +18,7 @@
 
 ## Task 4
 
-- [ ] `4-mutations.js`
+- [x] `4-mutations.js`
 
 ## Task 5
 
