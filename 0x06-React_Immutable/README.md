@@ -22,7 +22,7 @@
 
 ## Task 5
 
-- [ ] `5-merge.js`
+- [x] `5-merge.js`
 
 ## Task 6
 
