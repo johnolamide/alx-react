@@ -2,12 +2,14 @@
 
 ## Task 0
 
-- [ ] `0-fromjs.js`
+- [x] `0-fromjs.js`
 
 ## Task 1
+
 - [ ] `1-map.js`
 
 ## Task 2
+
 - [ ] `2-nested.js`
 
 ## Task 3
@@ -33,4 +35,3 @@
 ## Task 8
 
 - [ ] `8-seq.js`
-
