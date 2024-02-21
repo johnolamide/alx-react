@@ -1,3 +1,4 @@
+#!/usr/bin/node
 import { Map } from 'immutable';
 
 export const map = Map({
