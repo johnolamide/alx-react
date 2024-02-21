@@ -1,5 +1,4 @@
 #!/usr/bin/node
-
 const Immutable = require('immutable');
 
 function getImmutableObject(obj) {

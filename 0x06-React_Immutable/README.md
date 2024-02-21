@@ -6,7 +6,7 @@
 
 ## Task 1
 
-- [ ] `1-map.js`
+- [x] `1-map.js`
 
 ## Task 2
 
