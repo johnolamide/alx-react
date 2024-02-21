@@ -10,7 +10,7 @@
 
 ## Task 2
 
-- [ ] `2-nested.js`
+- [x] `2-nested.js`
 
 ## Task 3
 
