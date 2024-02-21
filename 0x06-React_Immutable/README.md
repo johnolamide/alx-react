@@ -14,7 +14,7 @@
 
 ## Task 3
 
-- [ ] `3-list.js`
+- [x] `3-list.js`
 
 ## Task 4
 
