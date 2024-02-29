@@ -1,4 +1,4 @@
-import { bindActionCreators } from 'redux';
+import { bindActionCreators } from '@reduxjs/toolkit';
 import { MARK_AS_READ, SET_TYPE_FILTER } from "./notificationActionTypes";
 
 export const markAsRead = (index) => {
