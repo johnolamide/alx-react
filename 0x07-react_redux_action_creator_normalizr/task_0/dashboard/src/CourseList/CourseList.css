@@ -1,0 +1,17 @@
+:root {
+  --border-color: grey;
+}
+
+#CourseList {
+  width: 100%;
+  border: 0.1rem solid var(--border-color);
+}
+
+#CourseList th:not([colspan='2']) {
+  text-align: left;
+  border-bottom: 0.1rem solid var(--border-color);
+}
+
+#CourseList th[colspan='2'] {
+  border-bottom: 0.1rem solid var(--border-color);
+}
