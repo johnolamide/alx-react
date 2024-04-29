@@ -1,10 +1,9 @@
-const getAllNotificationsByUser = require('./notifications');
-const notificationData = require('../../notifications.json');
+import getAllNotificationsByUser from "./notifications";
 
 describe('getAllNotificationsByUser', () => {
-  it("should return expected data for user with ID 5debd764a7c57c7839d722e9", () => {
-    const userId = '5debd764a7c57c7839d722e9';
-    const expectedData = [
+  it('should return notifications for a given user ID', () => {
+    const userId = "5debd764a7c57c7839d722e9 ";
+    const expectedNotifications = [
       {
         guid: "2d8e40be-1c78-4de0-afc9-fcc147afd4d2",
         isRead: true,
@@ -16,10 +15,9 @@ describe('getAllNotificationsByUser', () => {
         isRead: false,
         type: "urgent",
         value: "Non diam phasellus vestibulum lorem sed risus ultricies. Tellus mauris a diam maecenas sed",
-      }
+      },
     ];
-    const context = getAllNotificationsByUser(userId);
-
-    expect(context).toEqual(expect.arrayContaining(expectedData));
+    const userNotifications = getAllNotificationsByUser(userId);
+    expectedNotifications(userNotifications).toEqual(expect.arrayContaining(expectedNotifications));
   });
 });
