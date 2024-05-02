@@ -24,3 +24,5 @@ const hideNotificationDrawer = () => {
     type: HIDE_NOTIFICATION_DRAWER,
   };
 };
+
+export { login, logout, displayNotificationDrawer, hideNotificationDrawer };
