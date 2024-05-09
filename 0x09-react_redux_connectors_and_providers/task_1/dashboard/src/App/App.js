@@ -12,6 +12,7 @@ import BodySection from "../BodySection/BodySection";
 import { getLatestNotification } from "../utils/utils";
 import AppContext from "./AppContext";
 import { uiReducer } from '../reducers/uiReducer';
+import { displayNotificationDrawer, hideNotificationDrawer } from '../actions/uiActionCreators';
 
 const styles = StyleSheet.create({
   body: {
@@ -36,6 +37,11 @@ const listCourses = [
   { id: 2, name: "Webpack", credit: 20 },
   { id: 3, name: "React", credit: 40 },
 ];
+
+const mapDispatchToProps = {
+	displayNotificationDrawer,
+	hideNotificationDrawer
+};
 
 const mapStateToProps = state => {
 	return {
@@ -113,16 +119,15 @@ class App extends React.Component {
   }
 
   render() {
-		const { user, listNotifications } = this.state;
-		const { displayDrawer } = this.props;
+		const { user, listNotifications, displayNotificationDrawer, hideNotificationDrawer } = this.props;
 	return (
 		<AppContext.Provider value={this.state}>
 			<>
 				<Notifications
 					listNotifications={listNotifications}
 					displayDrawer={displayDrawer}
-					handleDisplayDrawer={this.handleDisplayDrawer}
-					handleHideDrawer={this.handleHideDrawer}
+					handleDisplayDrawer={displayNotificationDrawer}
+					handleHideDrawer={hideNotificationDrawer}
 					markNotificationAsRead={this.markNotificationAsRead}
 				/>
 				<div className={css(styles.body)}>
