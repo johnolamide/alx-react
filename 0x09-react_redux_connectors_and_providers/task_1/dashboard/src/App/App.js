@@ -95,14 +95,6 @@ class App extends React.Component {
 	})
   }
 	
-  handleDisplayDrawer = () => {
-	this.setState({ displayDrawer: true }, () => console.log(`state updated to: ${this.state.displayDrawer}`));
-  }
-
-  handleHideDrawer = () => {
-	this.setState({ displayDrawer: false }, () => console.log(`state updated to: ${this.state.displayDrawer}`));
-  }
-
   componentDidMount() {
 	document.addEventListener("keydown", this.handleLogout);
   }
@@ -161,5 +153,20 @@ class App extends React.Component {
 	);
   }
 }
+
+App.propTypes = {
+	isLoggedIn: PropTypes.bool,
+	displayDrawer: PropTypes.bool,
+	displayNotificationDrawer: PropTypes.func,
+	hideNotificationDrawer: PropTypes.func,
+};
+
+App.defaultProps = {
+	isLoggedIn: false,
+	displayDrawer: false,
+	displayNotificationDrawer: () => {},
+	hideNotificationDrawer: () => {},
+};
+
 
 export default connect(mapStateToProps) (App);
