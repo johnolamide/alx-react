@@ -7,6 +7,7 @@ import './index.css';
 import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 import { uiReducer } from './reducers/uiReducer';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 const store = createStore(uiReducer, applyMiddleware(thunk));
 
